@@ -26,6 +26,12 @@ Plugin 'Shougo/neomru.vim' " adds accessibility to most recently updated? files 
 
 Plugin 'pangloss/vim-javascript' " adds better js syntax highlighting and indentation
 
+Plugin 'vim-scripts/indentpython.vim' " adds better python indentation
+
+Plugin 'scrooloose/syntastic' " syntax checker for many languages
+
+Plugin 'nvie/vim-flake8' " syntax/style checker for python
+
 call vundle#end() " mark the end of all the plugins that Vundle will manage
 
 filetype plugin indent on " determine the filetype so indents and plugins can work
@@ -38,10 +44,25 @@ set background=dark
 let g:solarized_termtrans = 1
 colorscheme solarized
 
+" set up syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_python_exec = 'python3'
+let g:syntastic_python_checkers = ['flake8', 'python']
+
+let python_highlight_all = 1 " make python look prettier
+
 let g:gundo_prefer_python3 = 1 " make gundo use python3
 
 let g:ycm_confirm_extra_conf = 0 " make ycm stop prompting if it's found a more local version of ycm_extra_conf
 let g:ycm_autoclose_preview_window_after_completion = 1 " make the preview box at the top of the screen go away when I choose an autocomplete option
+let g:ycm_python_binary_path = 'python3' " set the binary of python for ycm to complete for
 
 let g:javascript_enable_domhtmlcss = 1 " enable html/css syntax highlighting as well from vim-javascript
 
@@ -92,6 +113,8 @@ set showmatch " highlight match on opposing braces
 set ttyfast " vim updates in larger buffer quantities on fast terminal connections
 
 set autoread " automatically updates file if it has been modified externally
+
+set encoding=utf-8 " sets the file encoding
 
 let mapleader="," " leader is now the comma as opposed to the \ (backslash)
 
