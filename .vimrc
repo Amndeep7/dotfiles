@@ -32,6 +32,8 @@ Plugin 'scrooloose/syntastic' " syntax checker for many languages
 
 Plugin 'nvie/vim-flake8' " syntax/style checker for python
 
+Plugin 'rust-lang/rust.vim' " file detection, syntax highlighting, formatting, syntastic integration, etc. for rust
+
 call vundle#end() " mark the end of all the plugins that Vundle will manage
 
 filetype plugin indent on " determine the filetype so indents and plugins can work
@@ -63,6 +65,7 @@ let g:gundo_prefer_python3 = 1 " make gundo use python3
 let g:ycm_confirm_extra_conf = 0 " make ycm stop prompting if it's found a more local version of ycm_extra_conf
 let g:ycm_autoclose_preview_window_after_completion = 1 " make the preview box at the top of the screen go away when I choose an autocomplete option
 let g:ycm_python_binary_path = 'python3' " set the binary of python for ycm to complete for
+let g:ycm_rust_src_path = '~/rustc-1.10.0/src' " allows ycm to find the source for rust so that it can have intelligent autocomplete - REMINDER: NEED TO SWAP TILDA OUT FOR ABSOLUTE PATH
 
 let g:javascript_enable_domhtmlcss = 1 " enable html/css syntax highlighting as well from vim-javascript
 
