@@ -34,6 +34,12 @@ Plugin 'nvie/vim-flake8' " syntax/style checker for python
 
 Plugin 'rust-lang/rust.vim' " file detection, syntax highlighting, formatting, syntastic integration, etc. for rust
 
+Plugin 'cespare/vim-toml' " syntax for TOML
+
+Plugin 'godlygeek/tabular' " aligns things along tabs and stuff - dependency for plasticboy/vim-markdown
+
+Plugin 'plasticboy/vim-markdown' " syntax highlighting, matching rules, and mappings for Markdown and extensions
+
 call vundle#end() " mark the end of all the plugins that Vundle will manage
 
 filetype plugin indent on " determine the filetype so indents and plugins can work
