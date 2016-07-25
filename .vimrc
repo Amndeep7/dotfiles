@@ -125,6 +125,8 @@ set autoread " automatically updates file if it has been modified externally
 
 set encoding=utf-8 " sets the file encoding
 
+set undofile " saves undo history to a file so that you can come back to it after closing vim
+
 let mapleader="," " leader is now the comma as opposed to the \ (backslash)
 
 " remap ctrl+movement keys to navigate splits
