@@ -63,6 +63,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_python_exec = 'python3'
 let g:syntastic_python_checkers = ['flake8', 'python']
+let g:syntastic_javascript_checkers = ['eslint']
 
 let python_highlight_all = 1 " make python look prettier
 
