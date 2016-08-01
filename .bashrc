@@ -111,3 +111,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# adding cargo to the path
+if [ -d "$HOME/.cargo/bin" ] ; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
