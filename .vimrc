@@ -74,7 +74,7 @@ let g:gundo_prefer_python3 = 1 " make gundo use python3
 let g:ycm_confirm_extra_conf = 0 " make ycm stop prompting if it's found a more local version of ycm_extra_conf
 let g:ycm_autoclose_preview_window_after_completion = 1 " make the preview box at the top of the screen go away when I choose an autocomplete option
 let g:ycm_python_binary_path = 'python3' " set the binary of python for ycm to complete for
-let g:ycm_rust_src_path = expand('~/rustc-1.10.0/src') " allows ycm to find the source for rust so that it can have intelligent autocomplete
+let g:ycm_rust_src_path = expand('~/rustc-1.11.0/src') " allows ycm to find the source for rust so that it can have intelligent autocomplete
 
 let g:javascript_enable_domhtmlcss = 1 " enable html/css syntax highlighting as well from vim-javascript
 
