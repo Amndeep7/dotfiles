@@ -40,6 +40,8 @@ Plugin 'godlygeek/tabular' " aligns things along tabs and stuff - dependency for
 
 Plugin 'plasticboy/vim-markdown' " syntax highlighting, matching rules, and mappings for Markdown and extensions
 
+Plugin 'exu/pgsql.vim' " better syntax highlighting for sql, in particular the postgres variant
+
 call vundle#end() " mark the end of all the plugins that Vundle will manage
 
 filetype plugin indent on " determine the filetype so indents and plugins can work
