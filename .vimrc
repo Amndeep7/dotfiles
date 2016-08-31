@@ -130,6 +130,10 @@ set encoding=utf-8 " sets the file encoding
 
 set undofile " saves undo history to a file so that you can come back to it after closing vim
 
+" opens new split panes to the right and bottom
+set splitbelow
+set splitright
+
 let mapleader="," " leader is now the comma as opposed to the \ (backslash)
 
 " remap ctrl+movement keys to navigate splits
