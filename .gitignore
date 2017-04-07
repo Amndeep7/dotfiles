@@ -1,2 +1,8 @@
-.config/
-.*.un~
+# only include specific files
+/*
+!/.config/
+/.config/*
+!/.config/flake8
+!/.bashrc
+!/.gitignore
+!/.vimrc
