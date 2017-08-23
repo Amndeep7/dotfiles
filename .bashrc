@@ -73,32 +73,40 @@ xterm*|rxvt*)
 esac
 
 # enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+case "$(uname -s)" in
+    Darwin)
+        # Mac OS X
+        alias ls='ls -AFhG'
 
-    case "$(uname -s)" in
-        Darwin)
-            # Mac OS X
-            alias ls='ls -AFhG'
-            ;;
-        *)
-            # every other os
+        alias grep='grep --color=auto'
+        alias fgrep='fgrep --color=auto'
+        alias egrep='egrep --color=auto'
+        ;;
+    *)
+        # every other os
+        if [ -x /usr/bin/dircolors ]; then
+            test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+
             alias ls='ls -AFh --color=auto --group-directories-first'
-            ;;
-    esac
 
-    alias ll='ls -l'
-    alias la='ls -A'
+            alias grep='grep --color=auto'
+            alias fgrep='fgrep --color=auto'
+            alias egrep='egrep --color=auto'
+        fi
+        ;;
+esac
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
+# another ls alias
+alias ll='ls -l'
 
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Docker image clean up aliases
+alias dckr-clean-containers='docker ps -a -q -f status=exited | xargs docker rm -v'
+alias dckr-clean-images='docker rmi $(docker images -a -q)'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -124,3 +132,13 @@ fi
 if [ -d "$HOME/.cargo/bin" ] ; then
     export PATH="$HOME/.cargo/bin:$PATH"
 fi
+
+# export Rust sourcecode
+if hash rustc; then
+	export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+fi
+
+# adding conscript
+export CONSCRIPT_HOME="$HOME/.conscript"
+export CONSCRIPT_OPTS="-XX:MaxPermSize=512M -Dfile.encoding=UTF-8"
+export PATH=$CONSCRIPT_HOME/bin:$PATH
