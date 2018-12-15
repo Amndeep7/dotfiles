@@ -108,6 +108,11 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias dckr-clean-containers='docker ps -a -q -f status=exited | xargs docker rm -v'
 alias dckr-clean-images='docker rmi $(docker images -a -q)'
 
+# Alias for powershell
+if [ -d '/mnt/c/Windows/System32/WindowsPowerShell/v1.0' ]; then
+	alias powershell='/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe'
+fi
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
