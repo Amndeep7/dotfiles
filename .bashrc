@@ -72,6 +72,11 @@ xterm*|rxvt*)
     ;;
 esac
 
+# turn on solarized color scheme
+if [ -d ~/mintty-colors-solarized/ ]; then
+	source ~/mintty-colors-solarized/sol.dark
+fi
+
 # enable color support of ls and also add handy aliases
 case "$(uname -s)" in
     Darwin)
