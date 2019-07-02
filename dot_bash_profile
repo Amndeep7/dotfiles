@@ -30,3 +30,7 @@ fi;
 
 # Add tab completions for Alacritty
 [ -d "~/alacritty" ] && source ~/alacritty/extra/completions/alacritty.bash
+
+# jEnv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
