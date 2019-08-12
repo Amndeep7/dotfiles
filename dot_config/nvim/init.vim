@@ -19,6 +19,9 @@ set undofile
 set splitbelow
 set splitright
 
+" use the system clipboard
+set clipboard=unnamed
+
 " remap ctrl+movement keys to navigate splits
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
@@ -31,5 +34,19 @@ nnoremap <Down> gj<Paste>
 
 " plugins
 call plug#begin()
+" manage plug with plug
 Plug 'junegunn/vim-plug'
+
+" javascript
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+
+" markdown
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install' }
+
+" solarized
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
+
+" plugin configuration
+" solarized
+colorscheme solarized
