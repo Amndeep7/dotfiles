@@ -13,7 +13,9 @@ alias ls="command ls ${colorflag} -F"
 
 alias la="ls -a"
 
+{{- if eq .environment "home" }}
 # Alias for powershell
 if [ -d '/mnt/c/Windows/System32/WindowsPowerShell/v1.0' ]; then
 	alias powershell='/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe'
 fi
+{{- end }}
