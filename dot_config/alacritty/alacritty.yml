@@ -548,6 +548,8 @@ key_bindings:
   #- { key: F,      mods: Command|Control, action: ToggleFullscreen }
 
   - { key: N,        mods: Command, action: SpawnNewInstance                 }
+  - { key: N,        mods: Super,   action: SpawnNewInstance                 }
+
   - { key: Paste,                   action: Paste                            }
   - { key: Copy,                    action: Copy                             }
   - { key: L,        mods: Control, action: ClearLogNotice                   }
