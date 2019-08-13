@@ -33,6 +33,4 @@ fi;
 
 # Set up package/environment managers
 # jEnv
-eval "$(jenv init -)"
-# SDKMAN
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+[ -x "$(command -v jenv)" ] && eval "$(jenv init -)"
