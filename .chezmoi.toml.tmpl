@@ -1,3 +1,5 @@
 {{- $environment := promptString "environment" -}}
+{{- $terminal_font_size := promptString "terminal_font_size" -}}
 [data]
   environment = "{{ $environment }}"
+  terminal_font_size = "{{ $terminal_font_size }}"
