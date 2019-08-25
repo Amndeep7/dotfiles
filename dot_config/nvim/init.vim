@@ -34,14 +34,18 @@ call plug#begin()
 " manage plug with plug
 Plug 'junegunn/vim-plug'
 
+" solarized color scheme
+Plug 'altercation/vim-colors-solarized'
+
 " javascript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 
 " markdown
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & npm install' }
+Plug 'iamcco/markdown-preview.nvim', { 'for': 'markdown', 'do': 'cd app & npm install' }
 
-" solarized
-Plug 'altercation/vim-colors-solarized'
+" python
+Plug 'numirias/semshi', { 'for': 'python', 'do': ':UpdateRemotePlugins' }
+
 call plug#end()
 
 " plugin configuration
