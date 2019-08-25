@@ -22,12 +22,6 @@ set splitright
 " use the system clipboard
 set clipboard=unnamed
 
-" remap ctrl+movement keys to navigate splits
-nnoremap <C-l> <C-w>l
-nnoremap <C-h> <C-w>h
-nnoremap <C-k> <C-w>k
-nnoremap <C-j> <C-w>j
-
 " remap up and down to go by visual lines as opposed to numbered lines
 nnoremap <Up> gk
 nnoremap <Down> gj<Paste>
