@@ -1,3 +1,6 @@
+" enable mouse
+set mouse=a
+
 " search is case insensitive unless you use uppercase letters
 set ignorecase
 set smartcase
