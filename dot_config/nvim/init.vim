@@ -46,6 +46,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'for': 'markdown', 'do': 'cd app & npm in
 " python
 Plug 'numirias/semshi', { 'for': 'python', 'do': ':UpdateRemotePlugins' }
 
+" vue
+Plug 'posva/vim-vue', { 'for': 'vue' }
+
 call plug#end()
 
 " plugin configuration
