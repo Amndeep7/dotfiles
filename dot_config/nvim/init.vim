@@ -158,7 +158,7 @@ Plug 'junegunn/vim-plug'
 Plug 'altercation/vim-colors-solarized'
 
 " completion framework and language server client
-Plug 'neoclide/coc.nvim', { 'tag': '*', 'branch': 'release' }
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " javascript
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
