@@ -172,6 +172,9 @@ Plug 'numirias/semshi', { 'for': 'python', 'do': ':UpdateRemotePlugins' }
 " vue
 Plug 'posva/vim-vue', { 'for': 'vue' }
 
+" inspec
+Plug 'TheLonelyGhost/vim-inspec'
+
 call plug#end()
 
 "" plugin configuration
