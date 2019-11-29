@@ -1,11 +1,11 @@
 # Fix `sudo` not recognizing aliases by default
-alias sudo="sudo ";
+alias sudo="sudo "
 
 # Detect which `ls`
 if ls --color > /dev/null 2>&1; then
-	colorflag="--color";
+	colorflag="--color"
 else # OS X
-	colorflag="-G";
+	colorflag="-G"
 fi
 
 # `ls` always uses color and displays in the long format
@@ -13,8 +13,10 @@ alias ls="command ls ${colorflag} -F"
 
 alias la="ls -a"
 
+{{- if eq .environment "home" }}
 
 # Alias for powershell
 if [ -d '/mnt/c/Windows/System32/WindowsPowerShell/v1.0' ]; then
-	alias powershell='/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe';
+	alias powershell='/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe'
 fi
+{{- end }}
