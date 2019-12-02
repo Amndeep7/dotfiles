@@ -42,6 +42,9 @@ set shortmess+=c
 " always show signcolumn
 set signcolumn=yes
 
+" any change to statusline removes the default so have to explicitly set one
+set statusline=%f\ %h%w%m%r%=%-14.(%l,%c%V%)\ %P
+
 "" remaps
 " remap up and down to go by visual lines as opposed to numbered lines
 nnoremap <Up> gk
