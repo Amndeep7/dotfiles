@@ -42,6 +42,10 @@ set shortmess+=c
 " always show signcolumn
 set signcolumn=yes
 
+" python
+let g:python_host_prog = expand('$PYENV_ROOT/versions/neovim2/bin/python')
+let g:python3_host_prog = expand('$PYENV_ROOT/versions/neovim3/bin/python')
+
 "" remaps
 " remap up and down to go by visual lines as opposed to numbered lines
 nnoremap <Up> gk
