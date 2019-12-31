@@ -42,6 +42,9 @@ set shortmess+=c
 " always show signcolumn
 set signcolumn=yes
 
+" any change to statusline removes the default so have to explicitly set one
+set statusline=%f\ %h%w%m%r%=%-14.(%l,%c%V%)\ %P
+
 " python
 let g:python_host_prog = expand('$PYENV_ROOT/versions/neovim2/bin/python')
 let g:python3_host_prog = expand('$PYENV_ROOT/versions/neovim3/bin/python')
