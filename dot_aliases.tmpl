@@ -11,7 +11,8 @@ fi
 # `ls` always uses color and displays in the long format
 alias ls="command ls ${colorflag} -F"
 
-alias la="ls -a"
+# `exa` always uses color, displays type indictators, and puts directories first
+alias exa="exa --color=always --group-directories-first -F"
 
 {{- if eq .environment "home" }}
 
