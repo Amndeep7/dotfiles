@@ -2,6 +2,9 @@
 " enable mouse
 set mouse=a
 
+" always highlight the entire line no matter the character length
+set synmaxcol=0
+
 " search is case insensitive unless you use uppercase letters
 set ignorecase
 set smartcase
@@ -25,6 +28,9 @@ set splitright
 
 " use the system clipboard
 set clipboard=unnamed
+
+" always have accurate syntax highlighting
+autocmd BufEnter * :syntax sync fromstart
 
 "" coc.nvim configuration
 " TextEdit might fail if not set
@@ -164,6 +170,12 @@ Plug 'junegunn/vim-plug'
 " solarized color scheme
 Plug 'altercation/vim-colors-solarized'
 
+" editorconfig
+Plug 'editorconfig/editorconfig-vim'
+
+" better matching
+Plug 'andymass/vim-matchup'
+
 " completion framework and language server client
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
@@ -177,7 +189,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'for': 'markdown', 'do': 'cd app & npm in
 Plug 'numirias/semshi', { 'for': 'python', 'do': ':UpdateRemotePlugins' }
 
 " vue
-Plug 'posva/vim-vue', { 'for': 'vue' }
+Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue', 'branch': 'master' }
 
 " inspec
 Plug 'TheLonelyGhost/vim-inspec'
@@ -187,3 +199,7 @@ call plug#end()
 "" plugin configuration
 " solarized
 colorscheme solarized
+
+" vue
+let g:vim_vue_plugin_use_sass = 1
+let g:vim_vue_plugin_highlight_vue_attr = 1

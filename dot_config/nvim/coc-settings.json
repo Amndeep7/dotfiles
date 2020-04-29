@@ -1,5 +1,10 @@
 {
 	"python.jediEnabled": false,
 	"python.linting.flake8Enabled": true,
-	"python.linting.enabled": true
+	"python.linting.enabled": true,
+	"eslint.filetypes": [
+		"javascript",
+		"vue"
+	],
+	"eslint.enable": true
 }

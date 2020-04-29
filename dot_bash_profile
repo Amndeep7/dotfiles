@@ -10,6 +10,9 @@ unset file
 # Case-insensitive globbing
 shopt -s nocaseglob
 
+# Recursive globbing
+shopt -s globstar
+
 # Don't put duplicate lines or lines starting with space in the history
 HISTCONTROL=ignoreboth
 # Unlimited history length
@@ -27,6 +30,8 @@ eval $($(brew --prefix)/bin/brew shellenv)
 # Add tab completion for many Bash commands
 if which brew > /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
 	source "$(brew --prefix)/share/bash-completion/bash_completion"
+elif [ -f /usr/local/share/bash-completion/bash_completion ]; then
+	. /usr/local/share/bash-completion/bash_completion
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion
 fi;
