@@ -185,6 +185,12 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 " markdown
 Plug 'iamcco/markdown-preview.nvim', { 'for': 'markdown', 'do': 'cd app & npm install' }
 
+" yml
+Plug 'stephpy/vim-yaml', { 'for': 'yaml' }
+
+" json
+Plug 'elzr/vim-json'
+
 " python
 Plug 'numirias/semshi', { 'for': 'python', 'do': ':UpdateRemotePlugins' }
 
