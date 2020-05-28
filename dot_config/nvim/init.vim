@@ -200,6 +200,9 @@ Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue', 'branch': 'master' }
 " inspec
 Plug 'TheLonelyGhost/vim-inspec'
 
+" nginx
+Plug 'chr4/nginx.vim'
+
 call plug#end()
 
 "" plugin configuration
