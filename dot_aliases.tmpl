@@ -12,7 +12,10 @@ fi
 alias ls="command ls ${colorflag} -F"
 
 # `exa` always uses color, displays type indictators, and puts directories first
-alias exa="exa --color=always --group-directories-first -F"
+if [ -x "$(command -v exa)" ]; then
+	alias exa="exa --color=always --group-directories-first -F"
+	alias ls=exa
+fi
 
 {{- if eq .environment "home" }}
 
