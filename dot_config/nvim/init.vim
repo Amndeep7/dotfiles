@@ -212,3 +212,9 @@ colorscheme solarized
 " vue
 let g:vim_vue_plugin_use_sass = 1
 let g:vim_vue_plugin_highlight_vue_attr = 1
+
+" vim-matchup
+augroup matchup_matchparen_highlight
+  autocmd!
+  autocmd BufNewFile,BufRead,ColorScheme * hi MatchWordCur cterm=italic
+augroup ENG
