@@ -17,6 +17,9 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 # poetry
 export PATH="$HOME/.poetry/bin:$PATH"
 
+# rbenv
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
 {{- if eq .environment "work" }}
 
 # android studio mac
