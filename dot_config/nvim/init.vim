@@ -203,9 +203,6 @@ Plug 'TheLonelyGhost/vim-inspec'
 " nginx
 Plug 'chr4/nginx.vim'
 
-" ruby
-Plug 'tpope/vim-endwise'
-
 call plug#end()
 
 "" plugin configuration
