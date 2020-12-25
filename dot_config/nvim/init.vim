@@ -183,7 +183,7 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 
 " markdown
-Plug 'iamcco/markdown-preview.nvim', { 'for': 'markdown', 'do': 'cd app & npm install' }
+Plug 'iamcco/markdown-preview.nvim', { 'for': 'markdown', 'do': 'cd app & yarn install' }
 
 " yml
 Plug 'stephpy/vim-yaml', { 'for': 'yaml' }
