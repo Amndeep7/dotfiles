@@ -218,3 +218,6 @@ augroup matchup_matchparen_highlight
   autocmd!
   autocmd BufNewFile,BufRead,ColorScheme * hi MatchWordCur cterm=italic
 augroup ENG
+
+" coc.nvim
+let g:coc_global_extensions = ['coc-marketplace', 'coc-json', 'coc-yaml', 'coc-xml', 'coc-toml', 'coc-markdownlint', 'coc-svg', 'coc-docker', 'coc-java', 'coc-sql', 'coc-sh', 'coc-vimlsp', 'coc-rust-analyzer', 'coc-pyright', 'coc-solargraph', 'coc-tsserver', 'coc-vetur', 'coc-stylelint', 'coc-scssmodules', 'coc-prettier', 'coc-html', 'coc-eslint', 'coc-css']
