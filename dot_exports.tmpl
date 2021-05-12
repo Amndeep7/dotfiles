@@ -30,6 +30,9 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# curl
+export PATH="/usr/local/opt/curl/bin:$PATH"
 {{- end }}
 
 {{- if eq .environment "home" }}
