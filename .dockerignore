@@ -1,0 +1,6 @@
+# vim spam
+.*.un~
+.*.swp
+
+# git
+.git/
