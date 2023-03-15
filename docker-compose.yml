@@ -1,0 +1,8 @@
+services:
+  dev:
+    build:
+      context: "."
+      args:
+        - "USERNAME=${USER:-dev}"
+        - "UID=${UID:-1000}"
+        - "GID=${GID:-1000}"
