@@ -4,6 +4,9 @@ filetype plugin indent on " determine the filetype so indents and plugins can wo
 
 syntax enable " turn on syntax highlighting
 
+set background=dark " dark mode
+colorscheme solarized " solarized
+
 set mouse=a " turn on the mouse
 
 " stop wrap margins inserting hard breaks
