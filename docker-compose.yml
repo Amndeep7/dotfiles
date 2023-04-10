@@ -3,6 +3,6 @@ services:
     build:
       context: "."
       args:
-        - "USERNAME=${USER:-dev}"
+        - "USERNAME=${USER:-amn}"
         - "UID=${UID:-1000}"
         - "GID=${GID:-1000}"
